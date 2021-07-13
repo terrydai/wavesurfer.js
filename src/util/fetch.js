@@ -119,7 +119,7 @@ export default function fetchFile(options) {
     }
     const instance = new Observer();
     const fetchHeaders = new Headers();
-    const fetchRequest = new Request(options.url);
+    const fetchRequest = new Request(options.url + '&r=' + Math.random());
 
     // add ability to abort
     instance.controller = new AbortController();
